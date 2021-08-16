@@ -4,7 +4,7 @@
 
 <head>
     
-    <title>文章归档：2021 - zhouxuan77 的博客</title>
+    <title>【node.js】使用 nvm 管理 node.js 版本 - zhouxuan77 的博客</title>
     <meta charset="UTF-8">
     <meta name="description" content="建设中.... 暂不对外开放">
     <meta name="keywords" content="">
@@ -13,19 +13,31 @@
     
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="建设中.... 暂不对外开放">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhouxuan77 的博客">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+    <meta name="description" content="记录一下如何使用 nvm 管理 node.js 版本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【node.js】使用 nvm 管理 node.js 版本">
+<meta property="og:url" content="http://example.com/2021/08/10/%E3%80%90node.js%E3%80%91%E4%BD%BF%E7%94%A8-nvm-%E7%AE%A1%E7%90%86-node.js-%E7%89%88%E6%9C%AC/index.html">
 <meta property="og:site_name" content="zhouxuan77 的博客">
-<meta property="og:description" content="建设中.... 暂不对外开放">
+<meta property="og:description" content="记录一下如何使用 nvm 管理 node.js 版本">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/08/10/Fw7Hk1NizuPcK5a.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/10/VwRjUg3acz8xHST.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/11/g9uO5D1iweznIPL.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/11/ekrYQ6NM7Anhuyq.png">
+<meta property="article:published_time" content="2021-08-10T11:33:57.000Z">
+<meta property="article:modified_time" content="2021-08-10T16:55:02.000Z">
 <meta property="article:author" content="zhouxuan77">
+<meta property="article:tag" content="Program">
+<meta property="article:tag" content="版本管理">
+<meta property="article:tag" content="开发环境">
+<meta property="article:tag" content="node.js">
+<meta property="article:tag" content="nvm">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/08/10/Fw7Hk1NizuPcK5a.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1629120976828">
+    <link rel="stylesheet" href="/css/style.css?v=1629120976820">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1629120976828">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1629120976820">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -160,85 +172,103 @@
     </div>
     <div id="nexmoe-content">
         <div class="nexmoe-primary">
-            <section class="nexmoe-posts">
-    
-    <div class="nexmoe-post">
-        <a href="/2021/08/16/%E3%80%90Git%E3%80%91Git-%E5%90%8C%E6%97%B6%E8%BF%9E%E6%8E%A5-Github-%E5%92%8C-Gitee/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
-                    <img data-src="https://i.loli.net/2021/08/09/29yUYPbnhBearlp.png" data-sizes="auto" alt="【Git】Git 同时连接 Github 和 Gitee" class="lazyload">
-                    <h1>【Git】Git 同时连接 Github 和 Gitee</h1>
-                </div>
-            
-        </a>
+            <div class="nexmoe-post">
 
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2021年08月16日</a>
-            <a><i class="nexmoefont icon-areachart"></i>368 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-        </div>
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://i.loli.net/2021/08/10/2Zzy6IOVXB8HaYP.jpg" data-sizes="auto" alt="【node.js】使用 nvm 管理 node.js 版本" class="lazyload">
+              <h1>【node.js】使用 nvm 管理 node.js 版本</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年08月10日</a>
+    <a><i class="nexmoefont icon-areachart"></i>321 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
 
-        <article>
-            
-                <blockquote>
-<p>究其原因，Github 的访问速度太拉垮了，迫于无奈。先用 Gitee push，再转存到 Github 上</p>
-</blockquote>
-            
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
-        <a href="/2021/08/10/%E3%80%90node.js%E3%80%91%E4%BD%BF%E7%94%A8-nvm-%E7%AE%A1%E7%90%86-node.js-%E7%89%88%E6%9C%AC/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: NaN%;"> 
-                    <img data-src="https://i.loli.net/2021/08/10/2Zzy6IOVXB8HaYP.jpg" data-sizes="auto" alt="【node.js】使用 nvm 管理 node.js 版本" class="lazyload">
-                    <h1>【node.js】使用 nvm 管理 node.js 版本</h1>
-                </div>
-            
-        </a>
+      
 
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2021年08月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>321 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-        </div>
-
-        <article>
-            
-                <blockquote>
+      <blockquote>
 <p>记录一下如何使用 nvm 管理 node.js 版本</p>
 </blockquote>
-            
-        </article>
+<span id="more"></span>
+
+<h3 id="node-js-安装"><a href="#node-js-安装" class="headerlink" title="node.js 安装"></a>node.js 安装</h3><ol>
+<li>下载 nvm<ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></li>
+<li>网盘地址：暂无</li>
+</ul>
+</li>
+<li>安装 nvm<ul>
+<li>nvm-noinstall.zip：绿色免安装版本，使用前需要配置</li>
+<li>nvm-setup.zip：安装包，使用前无需配置</li>
+<li>Source code(zip)：zip 压缩的源码</li>
+<li>Source code(tar.gz)：tar.gz 的源码</li>
+<li>安装步骤一直 next 即可</li>
+<li><u>如需要更改路径，路径不得出现中文和空格</u></li>
+</ul>
+</li>
+<li>配置 nvm<ul>
+<li>在 nvm 安装路径下找到 setting.txt [^注1]<br>[^注1]：root：nvm 路径；path：nodejs 路径<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://i.loli.net/2021/08/10/Fw7Hk1NizuPcK5a.png" alt="01.PNG" class="lazyload"></li>
+<li>在末尾添加  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: http://npm.taobao.org/mirrors/node/ </span><br><span class="line">npm_mirror: https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure></li>
+<li>添加后效果<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://i.loli.net/2021/08/10/VwRjUg3acz8xHST.png" alt="02.PNG" class="lazyload"></li>
+</ul>
+</li>
+<li>下载对应版本的 node.js <ul>
+<li>下载最新版的 node.js<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install latest </span><br></pre></td></tr></table></figure></li>
+<li>查看已安装所有版本的 nodejs<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure></li>
+<li>安装对应版本的 nodejs<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 12.14.0</span><br></pre></td></tr></table></figure></li>
+<li>使用对应版本的 nodejs<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 12.14.0</span><br></pre></td></tr></table></figure></li>
+<li>小计一笔：<u>hexo 推荐的 nodejs 版本为：12.14.0</u></li>
+</ul>
+</li>
+</ol>
+<h3 id="node-js-环境配置"><a href="#node-js-环境配置" class="headerlink" title="node.js 环境配置"></a>node.js 环境配置</h3><ul>
+<li>在node和npm不能使用时，可以手动添加node的环境变量</li>
+</ul>
+<ol>
+<li><p>打开系统环境变量</p>
+</li>
+<li><p>在用户变量处，添加 <code>NVM_HOME</code> 和 <code>NVM_SYMLINK</code><br> <img data-fancybox="gallery" data-sizes="auto" data-src="https://i.loli.net/2021/08/11/g9uO5D1iweznIPL.png" alt="03.PNG" class="lazyload"></p>
+</li>
+<li><p>在系统变量处，添加 <code>%NVM_HOME%</code> 和 <code>%NVM_SYMLINK%</code><br> ![04.PNG]](<a target="_blank" rel="noopener" href="https://i.loli.net/2021/08/11/cXplmON6GPKakfZ.png">https://i.loli.net/2021/08/11/cXplmON6GPKakfZ.png</a>)</p>
+</li>
+<li><p>启动 <code>CMD</code> ，输入 <code>node -v</code> 和 <code>npm-v</code>，显示版本号即可<br> <img data-fancybox="gallery" data-sizes="auto" data-src="https://i.loli.net/2021/08/11/ekrYQ6NM7Anhuyq.png" alt="05.PNG" class="lazyload"></p>
+</li>
+</ol>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>zhouxuan77<br>
+        <strong>本文链接：</strong><a href="http://example.com/2021/08/10/%E3%80%90node.js%E3%80%91%E4%BD%BF%E7%94%A8-nvm-%E7%AE%A1%E7%90%86-node.js-%E7%89%88%E6%9C%AC/" title="http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;08&#x2F;10&#x2F;%E3%80%90node.js%E3%80%91%E4%BD%BF%E7%94%A8-nvm-%E7%AE%A1%E7%90%86-node.js-%E7%89%88%E6%9C%AC&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;08&#x2F;10&#x2F;%E3%80%90node.js%E3%80%91%E4%BD%BF%E7%94%A8-nvm-%E7%AE%A1%E7%90%86-node.js-%E7%89%88%E6%9C%AC&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
     </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
     
-    <div class="nexmoe-post">
-        <a href="/2021/08/10/%E3%80%90node.js%E3%80%91%E5%9C%A8-WebStorm-%E4%B8%AD%E4%BD%BF%E7%94%A8-nvm/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: NaN%;"> 
-                    <img data-src="https://i.loli.net/2021/08/10/2Zzy6IOVXB8HaYP.jpg" data-sizes="auto" alt="【node.js】在 WebStorm 中使用 nvm" class="lazyload">
-                    <h1>【node.js】在 WebStorm 中使用 nvm</h1>
-                </div>
-            
-        </a>
-
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2021年08月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>62 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-        </div>
-
-        <article>
-            
-                <blockquote>
-<p>为了能省点事，嗯，一定是这样的</p>
-</blockquote>
-            
-        </article>
-    </div>
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/Program/">Program</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/Program/node-js/">node.js</a>
     
-</section>
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Program/" rel="tag">Program</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/node-js/" rel="tag">node.js</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/nvm/" rel="tag">nvm</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" rel="tag">开发环境</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/" rel="tag">版本管理</a>
+    
+</div>
 
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
             <div class="nexmoe-post-right">
               <div class="nexmoe-fixed">
                   <div class="nexmoe-tool"> 
@@ -257,7 +287,7 @@
 
  
 
-<script async src="/js/app.js?v=1629120976829"></script>
+<script async src="/js/app.js?v=1629120976821"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
